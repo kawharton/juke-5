@@ -1,7 +1,8 @@
 <div>
   <h3>{{ playlist.name }}</h3>
   <table class='table' ng-show="playlist.songs.length">
-    <thead>
+  <song-list songs="playlist.songs"></song-list>
+   <!--  <thead>
       <tr>
         <th></th>
         <th>Name</th>
@@ -20,7 +21,7 @@
         <td><span ng-repeat="artist in song.artists">{{ artist.name }}{{ $last ? '' : ', ' }}</span></td>
         <td>{{ song.genres.join(', ') }}</td>
       </tr>
-    </tbody>
+    </tbody> -->
   </table>
   <small ng-hide="playlist.songs.length">No songs.</small>
   <hr>
